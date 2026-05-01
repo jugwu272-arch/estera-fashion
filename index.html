@@ -2,150 +2,108 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>ESTÉRA FASHION</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
   <style>
-body {
-  font-family: 'Playfair Display', serif;
+* {
+  box-sizing: border-box;
+}
+
+  body {
   margin: 0;
-  background: #f9e4e7;
-  text-align: center;
-  color: #5a3a3a;
+  background: linear-gradient(to bottom, #f8cdd3, #e8b4bc);
+  font-family: Arial, sans-serif;
 }
-
-.hero {
-  padding: 40px 20px 10px;
-}
-
-.hero img {
-  width: 80%;
-  max-width: 500px;
-  border-radius: 20px;
-}
-
 .container {
-  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
 }
 
 .product {
-  background: #ffffff;
+  background: #f7e4e7;
   border-radius: 20px;
-  padding: 15px;
-  margin: 15px;
-  display: inline-block;
-  width: 220px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  padding: 10px;
+  text-align: center;
 }
 
 .product img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 15px;
+  border-radius: 12px;
 }
-
-.product h3 {
-  color: #a85c63;
+.product {
+  background: #fbe4e8;
 }
+.product {
+  background: #fbe4e8;
+  border-radius: 20px;
+  padding: 12px;
+  text-align: center;
 
-.product p {
-  color: #777;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 button {
-  background: #e8b4b8;
-  color: #fff;
-  border: none;
-  padding: 10px;
   width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
+  padding: 12px;
+  background: linear-gradient(to right, #f8a5b5, #e78ca0);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(231, 140, 160, 0.4);
 }
 
 button:hover {
-  background: #d89aa0;
+  background: linear-gradient(to right, #e78ca0, #d96b85);
+  transform: scale(1.03);
 }
-
-    header {
-      background: #000;
-      color: #fff;
-      padding: 20px;
-    }
-
-    header h1 {
-      letter-spacing: 4px;
-      margin: 0;
-    }
-
-    header p {
-      color: #f8cdd3;
-      font-style: italic;
-      margin-top: 5px;
-    }
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px; /* reduce space */
-  padding: 10px;
+button:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.9),
+              0 0 40px rgba(255, 182, 193, 0.6);
 }
-
-.product {
+button {
+  position: relative; /* needed for flowers */
   width: 100%;
-  max-width: 160px; /* smaller for phone */
-  margin: auto;
+  padding: 12px;
+  background: linear-gradient(to right, #f8a5b5, #e78ca0);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  overflow: hidden;
+}
+button::before,
+button::after {
+  content: "🌸";
+  position: absolute;
+  font-size: 18px;
+  opacity: 0.7;
 }
 
-    .product {
-      background: #fff;
-      border-radius: 15px;
-      padding: 15px;
-      margin: 15px;
-      display: inline-block;
-      width: 220px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .product img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .product h3 {
-      margin: 10px 0 5px;
-      color: #000;
-    }
-
-    .product p {
-      margin: 5px 0;
-      color: #555;
-    }
-@media (max-width: 600px) {
-  .product {
-    max-width: 150px;
-  }
+button::before {
+  top: -8px;
+  left: -8px;
 }
-    button {
-      background: #000;
-      color: #fff;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      margin-top: 10px;
-      cursor: pointer;
-      border-radius: 8px;
-      font-family: inherit;
-    }
 
-    button:hover {
-      background: #f8cdd3;
-      color: #000;
-    }
+button::after {
+  bottom: -8px;
+  right: -8px;
+}
+button:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.9);
+}
 
     footer {
       margin-top: 30px;
@@ -153,6 +111,50 @@ button:hover {
       background: #000;
       color: #fff;
     }
+    .banner {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+.hero {
+  padding: 10px;
+}
+.info {
+  flex-grow: 1;
+}
+.contact {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #f8cdd3, #e8b4bc);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.contact p {
+  margin: 0;
+  font-weight: bold;
+  color: #8a4b5c;
+}
+
+.contact a {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #c06c84;
+  font-size: 18px;
+  font-weight: bold;
+}
+.coming {
+  text-align: center;
+  margin: 25px 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #c06c84;
+  letter-spacing: 1px;
+}
   </style>
 </head>
 
@@ -160,53 +162,61 @@ button:hover {
 
   <!-- Logo Section -->
   <div class="hero">
-    <img src="logo.jpg" alt="ESTÉRA Logo">
+    <img src="logo.jpg" alt="ESTÉRA Logo" class="banner">
   </div>
 
 <div class="container">
 
   <!-- Product 1 -->
   <div class="product">
-    <img src="dress1.jpg">
-    <h3>Red Dinner Dress</h3>
-    <p>₦10,000</p>
-    <button onclick="buyNow('Red Dinner Dress')">Buy Now</button>
+  <img src="dress1.jpg">
+
+  <div class="info">
+    <h3>Sexy bum short(sample)</h3>
+    <p>₦4000</p>
   </div>
+
+  <button>Buy Now</button>
+</div>
 
   <!-- Product 2 -->
   <div class="product">
     <img src="dress2.jpg">
-    <h3>Casual 2-Piece</h3>
-    <p>₦8,000</p>
-    <button onclick="buyNow('Casual 2-Piece')">Buy Now</button>
+    <h3>Bum shorts(sample)</h3>
+    <p>₦4000</p>
+    <button onclick="buyNow('Bum shorts(sample)')">Buy Now</button>
   </div>
 
   <!-- Product 3 -->
   <div class="product">
     <img src="dress3.jpg">
-    <h3>Elegant Pink Gown</h3>
-    <p>₦12,000</p>
-    <button onclick="buyNow('Elegant Pink Gown')">Buy Now</button>
+    <h3>Sexy panties(sample)</h3>
+    <p>₦2000-2500</p>
+    <button onclick="buyNow('sexy panties(sample)')">Buy Now</button>
   </div>
 
   <!-- Product 4 -->
   <div class="product">
     <img src="dress4.jpg">
-    <h3>Street Style Outfit</h3>
-    <p>₦9,000</p>
-    <button onclick="buyNow('Street Style Outfit')">Buy Now</button>
+    <h3>Sexy panties(sample)</h3>
+    <p>₦2000-2500</p>
+    <button onclick="buyNow('Sexy panties(sample)')">Buy Now</button>
   </div>
-
+  
 </div>
 
   </div>
+<!-- Footer -->
+<p class="coming">✨ MORE COMING SOON!!! ✨</p>
+
+<div class="contact">
+<div class="contact">
+  <p>Contact us on whatsapp</p>
+  <a href="tel:+2347042500623">📞 07042500623</a>
+</div>
 
 </body>
-
-  <!-- Footer -->
-  <footer>
-    <p>Contact: 2347042500623</p>
-  </footer>
+</body>
 
   <!-- Script -->
   <script>
